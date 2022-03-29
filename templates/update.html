@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+<title>Flask Page Task Master</title>
+{% endblock %}
+
+{% block body %} 
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="text-center">Update Task</h1>
+    </div>
+    <div class="col-lg-12">
+        <form action="/update/{{ task.my_id}}" method="POST">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="content" id="content" value="{{task.content}}">
+            <div class="input-group-append">
+              <input type="submit" value="Update" class="btn btn-primary form-control pl-5 pr-5">
+            </div>
+          </div>
+        </form> 
+    </div>
+  </div>
+</div>
+{% endblock %}
